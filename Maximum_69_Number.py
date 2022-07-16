@@ -1,10 +1,8 @@
-n = input()
-k = ""
-j = 0
-for i in range(len(n)):
-    if(n[i] == "6" and j == 0):
-        k+="9"
-        j+=1
-    else:
-        k+= n[i]
-print(int(k))
+n=list(input())
+for i in n:
+    if i=='6':
+        p=n.index(i)
+        n.remove(i)
+        n.insert(p,'9')
+        break
+print(''.join(n))    
