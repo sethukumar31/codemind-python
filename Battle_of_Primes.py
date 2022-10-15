@@ -1,17 +1,12 @@
-def isprime(n):
-    for i in range(2,int(n**0.5)+1):
-        if n%i==0:
-            return 0
-    return 1
-n1=int(input())
-n2=int(input())
-s=n1+n2
-k=0
-i=1
-while s>0:
-    if isprime(s+i)==1:
-        k=(s+i)
+n=int(input())
+m=int(input())
+s1=n+m
+c=0
+for i in range(1,11):
+    s2=s1+i
+    for j in range(2,s2):
+        if(s2%j==0):
+            break
+    else:
+        print(i)
         break
-    i+=1
-d=k-s
-print(d)
